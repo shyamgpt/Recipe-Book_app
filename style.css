@@ -106,6 +106,7 @@ h1{
     .recipe-item a{
         width: 100%;
         text-align: center;
+        /* display: flex; */
     }
     
 }

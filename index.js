@@ -23,10 +23,16 @@ function displayRecipes(recipes){
         recipeIngredientsEle.innerHTML =`<strong>Ingredient: </strong> ${recipe.extendedIngredients
         .map((ingredient) => ingredient.original).join(", ")}`
 
+        recipeLinkEle = document.createElement("a");
+        recipeLinkEle.href = recipe.sourceUrl;
+        recipeLinkEle.innerText = "View Recipe";
+
         recipeItemEle.appendChild(recipeImageEle);
         recipeItemEle.appendChild(recipeTitleEle);
         recipeItemEle.appendChild(recipeIngredientsEle);
+        recipeItemEle.appendChild(recipeLinkEle);
         recipeListEle.appendChild(recipeItemEle);
+       
     })
 }
 
